@@ -1,0 +1,34 @@
+
+.gridChiffres{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 30px; 
+  height: 100%;
+}
+
+.chiffres{
+  border-radius: 7px;
+  background-color: #FBFBFB;
+  display: flex;
+  padding: 20px;
+  
+}
+
+.chiffres img{
+  max-width: 60px;
+  margin-right: 20px;
+}
+
+.nombres{
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nombres .value{
+  font-size: 1.5em;
+}
+.nombres .label{
+  color: #8D91A0;
+}

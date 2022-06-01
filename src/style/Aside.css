@@ -1,0 +1,22 @@
+aside{
+  background-color: black;
+  height: 100%;
+  position: absolute;
+  width: 10%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+aside div{
+  display: flex;
+  grid-gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+aside img{
+  max-width: 50%;
+}
