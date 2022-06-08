@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import '../style/Board.css';
 
 const data = [
   {
@@ -46,6 +47,21 @@ const data = [
   },
 ];
 
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="customTooltip">
+        <p>{`${payload[0].value}kg`}</p>
+				<p>{`${payload[1].value}Kcal`}</p>
+      </div>
+    );
+  }
+  return null;
+};
+
+
+
 export default class Graph1 extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/simple-bar-chart-tpz8r';
 
@@ -63,13 +79,13 @@ export default class Graph1 extends PureComponent {
             bottom: 5,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+          <XAxis dataKey="name" tickLine={false} tickSize="10" />
+          <YAxis orientation='right' axisLine={false} tickLine={false} tickSize="30"/>
+          <Tooltip width={50} content={<CustomTooltip />}/>
           <Bar dataKey="kg" fill="#282D30" radius={[30, 30, 0, 0]} barSize={10}/>
           <Bar dataKey="Kcal" fill="#E60000" radius={[30, 30, 0, 0]} barSize={10}/>
+
         </BarChart>
       </ResponsiveContainer>
     );

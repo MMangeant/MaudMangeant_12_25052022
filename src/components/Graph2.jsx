@@ -53,9 +53,10 @@ export default class Graph2 extends PureComponent {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <LineChart width={300} height={100} data={data}>
-          <Line type="monotone" dataKey="pv" stroke="#fff" strokeWidth={2} />
+          <Line type="monotone" dataKey="pv" stroke="#fff" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     );
   }
 }
+

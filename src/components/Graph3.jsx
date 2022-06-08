@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, Legend, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -47,12 +47,12 @@ export default class Graph3 extends PureComponent {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
-          {/* <PolarRadiusAxis /> */}
-          <Radar name="Mike" dataKey="A" /* stroke="#fff" */ fill="#FF0101" fillOpacity={0.6} />
+          <PolarGrid radialLines={false}/>
+          <PolarAngleAxis dataKey="subject" tickLine={false} style={{fontSize: 10}} stroke="white"/>
+          <Radar name="Mike" dataKey="A"  fill="#FF0101" fillOpacity={0.6} />
         </RadarChart>
       </ResponsiveContainer>
     );
   }
 }
+

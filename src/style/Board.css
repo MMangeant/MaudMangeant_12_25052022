@@ -3,7 +3,8 @@
   position: absolute;
   right: 0;
   text-align: left;
- 
+  background-color: white;
+  z-index: -1;
 }
 
 #board h1{
@@ -58,4 +59,11 @@
 
 .gridChiffres{
   grid-area: area5; 
+}
+
+.customTooltip{
+  background-color: #E60000;
+  color: white;
+  font-size: 12px;
+  padding: 12px 8px;
 }

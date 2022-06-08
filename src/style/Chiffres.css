@@ -2,15 +2,16 @@
 .gridChiffres{
   display: flex;
   flex-direction: column;
-  grid-gap: 30px; 
+  /* grid-gap: 30px;  */
   height: 100%;
+  justify-content: space-between;
 }
 
 .chiffres{
   border-radius: 7px;
   background-color: #FBFBFB;
   display: flex;
-  padding: 20px;
+  padding: 30px;
   
 }
 

@@ -1,20 +1,29 @@
 
+import React from 'react';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+
 import './App.css';
-
 import Header from './components/Header';
-import Aside from './components/Aside';
-import Board from './components/Board';
+import Home from './pages/Home';
 
-function App() {
+
+const App = () => {
+
   return (
-    <div className="App">
-      <Header />
-      <div className='ctnPage'>
-        <Aside />
-        <Board />
-      </div>
-    </div>
-  );
+  <React.StrictMode>
+      <Router>
+        <div className='App'>
+        <Header />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+          </Routes>
+        </div>
+      </Router>
+    </React.StrictMode>
+  )
 }
 
+
+
 export default App;
+

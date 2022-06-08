@@ -1,7 +1,4 @@
-import icon1 from '../assets/icon1.png';
-import icon2 from '../assets/icon2.png';
-import icon3 from '../assets/icon3.png';
-import icon4 from '../assets/icon4.png';
+import icons from '../assets/icons.svg';
 import '../style/Aside.css';
 
 function Aside() {
@@ -9,10 +6,8 @@ function Aside() {
     <>
       <aside>
         <div>
-          <img src={icon1} className="icon" alt="icon" />
-          <img src={icon2} className="icon" alt="icon" />
-          <img src={icon3} className="icon" alt="icon" />
-          <img src={icon4} className="icon" alt="icon" />
+          <img src={icons} className="icon" alt="icon" />
+          <span>Copyright, SportSee 2020</span>
         </div>
         
       </aside>

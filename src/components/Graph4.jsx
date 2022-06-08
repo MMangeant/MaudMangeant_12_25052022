@@ -11,12 +11,7 @@ const data = [
 
 ];
 
-const style = {
-  top: '50%',
-  right: 0,
-  transform: 'translate(0, -50%)',
-  lineHeight: '24px',
-};
+
 
 export default class Graph4 extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/simple-radial-bar-chart-qf8fz';
@@ -27,7 +22,7 @@ export default class Graph4 extends PureComponent {
         <RadialBarChart cx="50%" cy="50%" innerRadius="100%" outerRadius="80%" barSize={15} data={data}>
           <RadialBar
             minAngle={15}
-            background
+            background="white"
             clockWise
             dataKey="uv"
           />
@@ -36,3 +31,5 @@ export default class Graph4 extends PureComponent {
     );
   }
 }
+
+
