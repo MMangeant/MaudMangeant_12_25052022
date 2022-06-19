@@ -5,7 +5,6 @@ import Graph2 from './Graph2';
 import Graph3 from './Graph3';
 import Graph4 from './Graph4';
 
-import FetchData from '../FetchData';
 
 import { getInfosUser } from '../services/service';
 
@@ -33,6 +32,7 @@ function Board() {
 
     console.log(data);
     const profil = data.userInfos;
+    const chiffres = data.keyData;
     
   return (
     <div>
@@ -41,7 +41,7 @@ function Board() {
       <section>
       <div id="board">
         <h1>Bonjour 
-          <span>{profil.firstName}</span>
+          <span> {profil.firstName}</span>
         </h1>
         <h2>Félicitation ! Vous avez explosé vos objectifs hier 👏</h2>
         <div className='gridBoard'>
@@ -59,7 +59,7 @@ function Board() {
             <Graph4 />
           </div>
           <div className='gridChiffres'>
-            <Chiffres />
+            <Chiffres data={chiffres}/>
           </div>
         </div>
       </div>

@@ -1,19 +1,19 @@
 
 export let userData = {
   "id": 18,
-        "userInfos": {
-            "firstName": 'Cecilia',
-            "lastName": 'Ratorez',
-            "age": 34,
-        },
-        "score": 0.3,
-        "keyData": {
-          "calorieCount": 2500,
-          "proteinCount": 90,
-          "carbohydrateCount": 150,
-          "lipidCount": 120
-        }
-      };
+  "userInfos": {
+    "firstName": 'Cecilio',
+    "lastName": 'Ratorez',
+    "age": 34,
+  },
+  "score": 0.3,
+  "keyData": {
+    "calorieCount": 2500,
+    "proteinCount": 90,
+    "carbohydrateCount": 150,
+    "lipidCount": 120
+  }
+};
       
 
 export async function getInfosUser(id){
@@ -25,6 +25,4 @@ let response = await fetch(`http://localhost:3000/user/${id}`)
   }
   return userData;
 }
-// console.log(test);
 
-// export { getInfosUser };
