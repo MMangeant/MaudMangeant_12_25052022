@@ -1,7 +1,10 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
+import { getAverageUser } from '../services/service';
+
+const dataB = [
   {
     name: 'Page A',
     uv: 4000,
@@ -46,17 +49,50 @@ const data = [
   },
 ];
 
-export default class Graph2 extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/tiny-line-chart-r5z0f';
 
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart width={300} height={100} data={data}>
-          <Line type="monotone" dataKey="pv" stroke="#fff" strokeWidth={2} dot={false} />
-        </LineChart>
-      </ResponsiveContainer>
-    );
-  }
+// const CustomTooltip = ({ active, payload }) => {
+//   if (active && payload && payload.length) {
+//     return (
+//       <div className="customTooltip">
+// 				<p>{`${payload[1].value} min`}</p>
+//       </div>
+//     );
+//   }
+//   return null;
+// };
+
+
+// static demoUrl = 'https://codesandbox.io/s/tiny-line-chart-r5z0f';
+
+export default function Graph2() {
+
+
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+
+    useEffect(() => {
+
+      getAverageUser(id)
+            .then(response => {
+              setData(response)
+              setLoading(true)
+            })
+    }, [id]);
+
+
+    const average = data.sessions;
+
+
+
+  return (
+    <ResponsiveContainer width="100%" height="100%">
+      <LineChart width={300} height={100} data={average}>
+        <Line type="natural"  dataKey="sessionLength" stroke="#fff" strokeWidth={2} dot={false} />
+  
+      </LineChart>
+    </ResponsiveContainer>
+  );
 }
 

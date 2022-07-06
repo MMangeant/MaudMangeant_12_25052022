@@ -6,19 +6,18 @@ import Graph3 from './Graph3';
 import Graph4 from './Graph4';
 
 
-import { getInfosUser } from '../services/service';
+import { getInfosUser, getActivityUser } from '../services/service';
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+// console.log(getInfosUser());
 
 function Board() {
 
   const { id } = useParams();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  console.log(getInfosUser(id));
 
 
     useEffect(() => {
@@ -30,7 +29,8 @@ function Board() {
             })
     }, [id]);
 
-    console.log(data);
+
+    // console.log(data);
     const profil = data.userInfos;
     const chiffres = data.keyData;
     

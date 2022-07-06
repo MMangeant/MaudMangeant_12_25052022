@@ -1,5 +1,8 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, Legend, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+
+import { getPerformanceUser } from '../services/service';
 
 const data = [
   {
@@ -40,19 +43,45 @@ const data = [
   },
 ];
 
-export default class Graph3 extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-radar-chart-rjoc6';
 
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-          <PolarGrid radialLines={false}/>
-          <PolarAngleAxis dataKey="subject" tickLine={false} style={{fontSize: 10}} stroke="white"/>
-          <Radar name="Mike" dataKey="A"  fill="#FF0101" fillOpacity={0.6} />
-        </RadarChart>
-      </ResponsiveContainer>
-    );
-  }
+
+//  static demoUrl = 'https://codesandbox.io/s/simple-radar-chart-rjoc6';
+
+
+export default function Graph3() {
+
+  const formatXAxis = (tick) => {
+		return tick + 1;
+	};
+
+
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+
+    useEffect(() => {
+
+      getPerformanceUser(id)
+            .then(response => {
+              setData(response)
+              setLoading(true)
+            })
+    }, [id]);
+
+
+    const hop = data;
+    console.log(hop.kind);
+
+
+  return (
+    <ResponsiveContainer width="100%" height="100%">
+      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+        <PolarGrid radialLines={false}/>
+        <PolarAngleAxis dataKey="subject" tickLine={false} style={{fontSize: 10}} stroke="white"/>
+        <Radar name="Mike" dataKey="A"  fill="#FF0101" fillOpacity={0.6} />
+      </RadarChart>
+    </ResponsiveContainer>
+  );
 }
 
