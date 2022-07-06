@@ -50,17 +50,6 @@ const dataB = [
 ];
 
 
-// const CustomTooltip = ({ active, payload }) => {
-//   if (active && payload && payload.length) {
-//     return (
-//       <div className="customTooltip">
-// 				<p>{`${payload[1].value} min`}</p>
-//       </div>
-//     );
-//   }
-//   return null;
-// };
-
 
 // static demoUrl = 'https://codesandbox.io/s/tiny-line-chart-r5z0f';
 
@@ -84,15 +73,28 @@ export default function Graph2() {
 
     const average = data.sessions;
 
+    console.log(average);
 
 
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart width={300} height={100} data={average}>
         <Line type="natural"  dataKey="sessionLength" stroke="#fff" strokeWidth={2} dot={false} />
-  
+        <Tooltip width={20}  cursor={{ stroke: 'black', strokeOpacity: 0.1, strokeWidth: 100}} content={<CustomTooltip />} />
       </LineChart>
     </ResponsiveContainer>
+    
   );
 }
 
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="tooltip-LineChart">
+        <p>{`${payload[0].value} min`}</p>
+      </div>
+    );
+  }
+  return null;
+};

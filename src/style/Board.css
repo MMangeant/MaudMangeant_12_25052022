@@ -61,9 +61,18 @@
   grid-area: area5; 
 }
 
-.customTooltip{
+.tooltip-BarChart{
   background-color: #E60000;
   color: white;
   font-size: 12px;
   padding: 12px 8px;
+  font-weight: 700;
+}
+
+.tooltip-LineChart{
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 5px 10px;
+  font-weight: 700;
 }

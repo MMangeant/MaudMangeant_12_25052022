@@ -144,9 +144,7 @@ export async function getInfosUser(id){
   let response = await fetch(`http://localhost:3000/user/${id}`)
   if(response.ok){
     let result = await response.json();
-    console.log(result);
     return userData = result.data
-    
   }
   return userData;
 }
@@ -155,8 +153,8 @@ export async function getInfosUser(id){
 export async function getActivityUser(id){
   let response = await fetch(`http://localhost:3000/user/${id}/activity`)
   if(response.ok){
-    // let result = await response.json();
-    // return userDataActivity = result.data
+    let result = await response.json();
+    return userDataActivity = result.data
   }
   return userDataActivity;
 }
@@ -165,8 +163,8 @@ export async function getActivityUser(id){
 export async function getAverageUser(id){
   let response = await fetch(`http://localhost:3000/user/${id}/average-sessions`)
   if(response.ok){
-    // let result = await response.json();
-    // return userDataAverage = result.data
+    let result = await response.json();
+    return userDataAverage = result.data
   }
   return userDataAverage;
 }
@@ -174,8 +172,8 @@ export async function getAverageUser(id){
 export async function getPerformanceUser(id){
   let response = await fetch(`http://localhost:3000/user/${id}/performance`)
   if(response.ok){
-    // let result = await response.json();
-    // return userDataPerformance = result.data
+    let result = await response.json();
+    return userDataPerformance = result.data
   }
   return userDataPerformance;
 }

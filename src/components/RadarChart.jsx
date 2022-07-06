@@ -71,7 +71,7 @@ export default function Graph3() {
 
 
     const hop = data;
-    console.log(hop.kind);
+    console.log(hop);
 
 
   return (

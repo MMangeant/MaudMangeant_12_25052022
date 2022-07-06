@@ -1,9 +1,9 @@
 import '../style/Board.css';
 import Chiffres from './Chiffres';
-import Graph1 from './Graph1';
-import Graph2 from './Graph2';
-import Graph3 from './Graph3';
-import Graph4 from './Graph4';
+import Graph1 from './BarChart';
+import Graph2 from './LineChart';
+import Graph3 from './RadarChart';
+import Graph4 from './RadialBarChart';
 
 
 import { getInfosUser, getActivityUser } from '../services/service';
