@@ -4,7 +4,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, Legend, PolarRadiusAxis, 
 
 import { getPerformanceUser } from '../services/service';
 
-const data = [
+const dataB = [
   {
     subject: 'Math',
     A: 120,
@@ -70,15 +70,14 @@ export default function Graph3() {
     }, [id]);
 
 
-    const hop = data;
-    console.log(hop);
+    const performance = data;
 
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={performance}>
         <PolarGrid radialLines={false}/>
-        <PolarAngleAxis dataKey="subject" tickLine={false} style={{fontSize: 10}} stroke="white"/>
+        <PolarAngleAxis dataKey="kind" tickLine={false} style={{fontSize: 10}} stroke="white"/>
         <Radar name="Mike" dataKey="A"  fill="#FF0101" fillOpacity={0.6} />
       </RadarChart>
     </ResponsiveContainer>

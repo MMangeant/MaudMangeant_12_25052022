@@ -33,6 +33,7 @@ function Board() {
     // console.log(data);
     const profil = data.userInfos;
     const chiffres = data.keyData;
+    const score = data.todayScore;
     
   return (
     <div>
@@ -50,13 +51,14 @@ function Board() {
             <Graph1 />
           </div>
           <div className="graph2 graphs">
+            {/* <div>Durée moyenne des <br />sessions</div> */}
             <Graph2 />
           </div>
           <div className="graph3 graphs">
             <Graph3 />
           </div>
           <div className="graph4 graphs">
-            <Graph4 />
+            <Graph4 data={[data]}/>
           </div>
           <div className='gridChiffres'>
             <Chiffres data={chiffres}/>
@@ -67,7 +69,7 @@ function Board() {
   </>
   }
   {!loading &&
-      <h1>SALUT</h1>
+      <h1>Page en construction</h1>
   }
   </div>    
   );

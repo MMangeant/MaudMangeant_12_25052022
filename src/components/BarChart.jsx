@@ -47,8 +47,11 @@ export default function Graph1() {
 
     const activity = data.sessions;
 
+    console.log(activity);
 
   return (
+    <>
+    {/* <div>Activité quotidienne</div> */}
     <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}
@@ -70,6 +73,8 @@ export default function Graph1() {
 
         </BarChart>
       </ResponsiveContainer>
+    
+    </>
   );
 }
 
