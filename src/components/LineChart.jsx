@@ -32,7 +32,7 @@ export default function Graph2() {
 
     const average = data.sessions;
 
-    console.log(average);
+    // console.log(average);
 
   return (
     <>

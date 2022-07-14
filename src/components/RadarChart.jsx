@@ -50,10 +50,6 @@ const dataB = [
 
 export default function Graph3() {
 
-  const formatXAxis = (tick) => {
-		return tick + 1;
-	};
-
 
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -70,17 +66,30 @@ export default function Graph3() {
     }, [id]);
 
 
-    const performance = data;
+    const performance = [data];
+    // console.log(performance);
 
+
+    console.log(performance[0].kind);
+
+    let testouille = [performance[0].kind];
+    console.log(testouille)
 
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={performance}>
-        <PolarGrid radialLines={false}/>
-        <PolarAngleAxis dataKey="kind" tickLine={false} style={{fontSize: 10}} stroke="white"/>
-        <Radar name="Mike" dataKey="A"  fill="#FF0101" fillOpacity={0.6} />
-      </RadarChart>
-    </ResponsiveContainer>
+    <>
+    {loading && 
+      <ResponsiveContainer width="100%" height="100%">
+        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={dataB}>
+          <PolarGrid radialLines={false}/>
+          <PolarAngleAxis dataKey={testouille} tickLine={false} style={{fontSize: 10}} stroke="white"/>
+          <Radar name="Mike" dataKey="A"  fill="#FF0101" fillOpacity={0.6} />
+        </RadarChart>
+      </ResponsiveContainer>
+    }
+    {!loading &&
+      <h1>Page en construction</h1>
+    }
+    </>
   );
 }
 
