@@ -1,0 +1,223 @@
+aside {
+  height: 100%;
+  position: absolute;
+  width: 10%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+aside div {
+  display: flex;
+  grid-gap: 15px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 220px;
+  height: 100%;
+}
+aside img {
+  max-width: 50%;
+}
+aside span {
+  color: #fff;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+header {
+  background-color: #000;
+  display: flex;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+header img {
+  max-width: 180px;
+  padding: 20px 30px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#board {
+  width: 90%;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  background-color: #fff;
+  z-index: -1;
+}
+
+#board h1 {
+  font-size: 2.6em;
+  margin-left: 70px;
+}
+
+#board h1 span {
+  color: #FF0000;
+}
+
+#board h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-left: 70px;
+}
+
+.gridBoard {
+  margin: 40px 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  grid-template-areas: "area1 area1 area1 area1 area1 area1 area5 area5" "area1 area1 area1 area1 area1 area1 area5 area5" "area2 area2 area3 area3 area4 area4 area5 area5" "area2 area2 area3 area3 area4 area4 area5 area5";
+}
+
+.graph1 {
+  grid-area: area1;
+  background-color: #FBFBFB;
+  min-height: 300px;
+}
+
+.graph2 {
+  grid-area: area2;
+  background-color: #FF0000;
+}
+
+.graph3 {
+  grid-area: area3;
+  background-color: #282D30;
+}
+
+.graph4 {
+  grid-area: area4;
+  background-color: #FBFBFB;
+}
+
+.graphs {
+  border-radius: 7px;
+}
+
+.gridChiffres {
+  grid-area: area5;
+}
+
+.gridChiffres {
+  display: flex;
+  flex-direction: column;
+  /* grid-gap: 30px;  */
+  height: 100%;
+  justify-content: space-between;
+}
+
+.chiffres {
+  border-radius: 7px;
+  background-color: #FBFBFB;
+  display: flex;
+  padding: 30px;
+}
+.chiffres img {
+  max-width: 60px;
+  margin-right: 20px;
+}
+
+.nombres {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nombres .value {
+  font-size: 1.5em;
+}
+.nombres .label {
+  color: #74798C;
+}
+
+.tooltip-BarChart {
+  background-color: #E60000;
+  color: #fff;
+  font-size: 12px;
+  padding: 12px 8px;
+  font-weight: 700;
+}
+
+.legende-BarChart {
+  font-weight: 500;
+  color: #74798C;
+}
+.legende-BarChart > div {
+  display: flex;
+  justify-content: space-between;
+}
+.legende-BarChart h3 {
+  color: #000;
+}
+.legende-BarChart p {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+.legende-BarChart .separateur {
+  margin-top: 20px;
+}
+.legende-BarChart > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.legende-BarChart .rond {
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin-right: 15px;
+}
+.legende-BarChart .rond.grey {
+  background: #282D30;
+}
+.legende-BarChart .rond.red {
+  background: #E60000;
+}
+
+.tooltip-LineChart {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 5px 10px;
+  font-weight: 700;
+}
+
+.legende-LineChart {
+  color: white;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 1.1em;
+  opacity: 0.8;
+}
+
+.legende-RadialChart {
+  text-align: center;
+  color: #8D91A0;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.legende-RadialChart > div:nth-child(1) {
+  color: black;
+  font-size: 1.4em;
+}
+
+.titleScore {
+  padding: 20px 0 0 30px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+/*# sourceMappingURL=style.css.map */

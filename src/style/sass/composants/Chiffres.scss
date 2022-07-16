@@ -9,15 +9,13 @@
 
 .chiffres{
   border-radius: 7px;
-  background-color: #FBFBFB;
+  background-color: $grisClair;
   display: flex;
   padding: 30px;
-  
-}
-
-.chiffres img{
-  max-width: 60px;
-  margin-right: 20px;
+  img{
+    max-width: 60px;
+    margin-right: 20px;
+  }
 }
 
 .nombres{
@@ -25,11 +23,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.nombres .value{
-  font-size: 1.5em;
-}
-.nombres .label{
-  color: #8D91A0;
+  .value{
+    font-size: 1.5em;
+  }
+  .label{
+    color: $grisMoyen;
+  }
 }

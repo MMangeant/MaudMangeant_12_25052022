@@ -1,5 +1,5 @@
 import icons from '../assets/icons.svg';
-import '../style/Aside.css';
+import '../style/style.css';
 
 function Aside() {
   return (

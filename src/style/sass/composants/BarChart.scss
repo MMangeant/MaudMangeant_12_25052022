@@ -1,0 +1,47 @@
+.tooltip-BarChart{
+  background-color: $rougeFonce;
+  color: $blanc;
+  font-size: 12px;
+  padding: 12px 8px;
+  font-weight: 700;
+}
+
+.legende-BarChart{
+  font-weight: 500;
+  color: $grisMoyen;
+  >div{
+    display: flex;
+    justify-content: space-between;
+  }
+  h3{
+    color: $noir;
+  }
+  p{
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+  }
+  .separateur{
+    margin-top: 20px;
+  }
+  >div >div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rond{
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin-right: 15px;
+    &.grey{
+      background: $grisFonce;
+    }
+    &.red{
+      background: $rougeFonce;
+    }
+  }
+} 
+
+

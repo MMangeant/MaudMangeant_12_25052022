@@ -2,7 +2,7 @@ import picto1 from '../assets/calories-icon.png';
 import picto2 from '../assets/protein-icon.png';
 import picto3 from '../assets/carbs-icon.png';
 import picto4 from '../assets/fat-icon.png';
-import '../style/Chiffres.css';
+import '../style/style.css';
 
 function Chiffres({data}) {
   return (

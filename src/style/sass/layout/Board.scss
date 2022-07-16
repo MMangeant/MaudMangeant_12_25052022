@@ -1,0 +1,62 @@
+#board{
+  width: 90%;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  background-color: $blanc;
+  z-index: -1;
+}
+
+#board h1{
+  font-size: 2.6em;
+  margin-left: 70px;
+}
+
+#board h1 span{
+  color: $rougeClair;
+}
+
+#board h2{
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-left: 70px;
+}
+
+.gridBoard{
+  margin: 40px 70px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 30px; 
+  grid-template-areas: 
+    "area1 area1 area1 area1 area1 area1 area5 area5"
+    "area1 area1 area1 area1 area1 area1 area5 area5"
+    "area2 area2 area3 area3 area4 area4 area5 area5"
+    "area2 area2 area3 area3 area4 area4 area5 area5"; 
+}
+
+.graph1 { 
+  grid-area: area1; 
+  background-color: $grisClair;
+  min-height: 300px;
+}
+.graph2 { 
+  grid-area: area2; 
+  background-color: $rougeClair;
+}
+.graph3 { 
+  grid-area: area3; 
+  background-color: $grisFonce;
+}
+.graph4 { 
+  grid-area: area4; 
+  background-color: $grisClair;
+}
+
+.graphs{
+  border-radius: 7px;
+}
+
+.gridChiffres{
+  grid-area: area5; 
+}

@@ -1,4 +1,4 @@
-import '../style/Board.css';
+import '../style/style.css';
 import Chiffres from './Chiffres';
 import Graph1 from './BarChart';
 import Graph2 from './LineChart';

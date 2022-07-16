@@ -1,12 +1,11 @@
 header{
-  background-color: black;
+  background-color: $noir;
   display: flex;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
-header img{
-  max-width: 180px;
-  padding: 20px 30px;
+  img{
+    max-width: 180px;
+    padding: 20px 30px;
+  }
 }
 
 nav{
@@ -14,10 +13,9 @@ nav{
   width: 100%;
   justify-content: space-around;
   align-items: center;
-}
-
-nav a{
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
+  a{
+    color: $blanc;
+    text-decoration: none;
+    font-size: 20px;
+  }
 }

@@ -1,10 +1,8 @@
 import React, { PureComponent, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Label } from 'recharts';
-import '../style/Board.css';
 
 import { getActivityUser } from '../services/service';
-
 
 
 const CustomTooltip = ({ active, payload }) => {
@@ -25,10 +23,10 @@ const CustomLegend = () => {
       <div>
         <h3>Activité quotidienne</h3>
         <div>
-          <div className="rond"></div>
-          <p>Poids (kg)</p>
-          <div className="rond"></div>
-          <p>Calories brûlées (kCal)</p>
+          
+          <p><div className="rond grey"></div>Poids (kg)</p>
+          
+          <p><div className="rond red"></div>Calories brûlées (kCal)</p>
         </div>
       </div>
       <div className='separateur'></div>
