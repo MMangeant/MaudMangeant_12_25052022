@@ -50,6 +50,12 @@ const dataB = [
 
 export default function Graph3() {
 
+  const kinds = ["Energie", "Endurance", "Force", "Vitesse", "Intensité", "Cardio"]
+
+  const formatNames = (tick) => {
+		return kinds[tick];
+	};
+
 
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -67,27 +73,36 @@ export default function Graph3() {
 
 
     const performance = [data];
-    console.log(performance);
+
+    let perfData = performance[0].data;
+    console.log(perfData)
 
 
-    // console.log(performance[0].kind);
-
-    let testouille = [performance[0].kind];
-    // console.log(testouille)
+    function kind(){
+      perfData.forEach(element => {
+          if(element.kind === 1) element.kind = 'Cardio';
+          if(element.kind === 2) element.kind = 'Energie';
+          if(element.kind === 3) element.kind = 'Endurance';
+          if(element.kind === 4) element.kind = 'Force';
+          if(element.kind === 5) element.kind = 'Vitesse';
+          if(element.kind === 6) element.kind = 'Intensité';
+      });
+        return perfData
+    }
+    {loading &&  
+      kind()
+    }
 
   return (
     <>
     {loading && 
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={dataB}>
+      <ResponsiveContainer  width="100%" height="100%">
+        <RadarChart margin={{ left: 20, right: 20 }}  cx="50%" cy="50%" outerRadius="80%" data={perfData}>
           <PolarGrid radialLines={false}/>
-          <PolarAngleAxis dataKey={testouille} tickLine={false} style={{fontSize: 10}} stroke="white"/>
-          <Radar name="Mike" dataKey="A"  fill="#FF0101" fillOpacity={0.6} />
+          <PolarAngleAxis dataKey="kind" tickLine={false} style={{fontSize: 10}} stroke="white"/>
+          <Radar name="Mike" dataKey="value"  fill="#FF0101" fillOpacity={0.6} />
         </RadarChart>
       </ResponsiveContainer>
-    }
-    {!loading &&
-      <h1>Page en construction</h1>
     }
     </>
   );

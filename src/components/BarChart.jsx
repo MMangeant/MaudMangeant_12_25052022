@@ -69,7 +69,6 @@ export default function Graph1() {
 
   return (
     <>
-    {/* <div>Activité quotidienne</div> */}
     <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}

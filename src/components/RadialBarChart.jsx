@@ -26,9 +26,9 @@ export default function Graph4({data}) {
 
   return (
     
-    <ResponsiveContainer width="100%" height="100%">
-   
-      <Chart
+   <>
+    <div className='titleScore'>Score</div>
+    <Chart
         width={258}
         height={263}
         innerRadius="70%"
@@ -39,7 +39,7 @@ export default function Graph4({data}) {
         endAngle={470}>
         <RadialBar background cornerRadius={40} /* label={{ value: {scores}, fill: '#666', position: 'center' }} */ fill="#FF0101" 
           dataKey={conditionScore} >
-        </RadialBar >
+        </RadialBar > 
         <Legend content={<CustomLegend />} verticalAlign='middle' align="middle"/>  
         <PolarAngleAxis
           type="number"
@@ -47,7 +47,7 @@ export default function Graph4({data}) {
           tick={false}
         />
       </Chart>
-    </ResponsiveContainer>
+   </>
   );
 }
 

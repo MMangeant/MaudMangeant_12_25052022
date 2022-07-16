@@ -30,7 +30,7 @@ function Board() {
     }, [id]);
 
 
-    console.log(id);
+    // console.log(id);
     const profil = data.userInfos;
     const chiffres = data.keyData;
     // const score = data.todayScore;
