@@ -30,10 +30,18 @@ function Board() {
     }, [id]);
 
 
-    // console.log(data);
+    console.log(id);
     const profil = data.userInfos;
     const chiffres = data.keyData;
-    const score = data.todayScore;
+    // const score = data.todayScore;
+
+
+    let conditionScore;
+    if (data.id === 18) {
+      conditionScore = "score";
+    } else {
+      conditionScore = "todayScore";
+    }
     
   return (
     <div>

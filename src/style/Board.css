@@ -61,6 +61,7 @@
   grid-area: area5; 
 }
 
+
 .tooltip-BarChart{
   background-color: #E60000;
   color: white;
@@ -68,7 +69,6 @@
   padding: 12px 8px;
   font-weight: 700;
 }
-
 .tooltip-LineChart{
   background-color: white;
   color: black;
@@ -77,15 +77,53 @@
   font-weight: 700;
 }
 
+.legende-BarChart{
+  font-weight: 500;
+  color: #8D91A0;
+}
+.legende-BarChart h3{
+  color: black;
+}
+.legende-BarChart .rond{
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+.legende-BarChart .rond:nth-child(1){
+  background: #282D30;
+}
+.legende-BarChart .rond:nth-child(2){
+  background: #E60000;
+}
 .legende-BarChart >div{
   display: flex;
   justify-content: space-between;
 }
 .legende-BarChart .separateur{
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .legende-BarChart >div >div{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.legende-RadialChart{
+  text-align: center;
+  color: #8D91A0;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.legende-RadialChart >div:nth-child(1){
+  color: black;
+  font-size: 1.4em;
+}
+
+.legende-LineChart{
+  color: white;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 1.1em;
+  opacity: 0.8;
 }

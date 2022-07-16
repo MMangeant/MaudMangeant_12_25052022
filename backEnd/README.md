@@ -19,7 +19,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 - Fork the repository
 - Clone it on your computer.
-- The `yarn` command will allow you to install the dependencies.
+- The `yarn` command will allow you to install the dependencies. / `npm install`
 - The `yarn dev` command will allow you to run the micro API.
 
 

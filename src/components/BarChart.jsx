@@ -25,7 +25,9 @@ const CustomLegend = () => {
       <div>
         <h3>Activité quotidienne</h3>
         <div>
+          <div className="rond"></div>
           <p>Poids (kg)</p>
+          <div className="rond"></div>
           <p>Calories brûlées (kCal)</p>
         </div>
       </div>
@@ -81,9 +83,6 @@ export default function Graph1() {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
-          {/* <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="10">
-            <Label value="Activité quotidienne" position="insideTopLeft" />
-          </XAxis> */}
           <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="10" />
           <YAxis orientation='right' axisLine={false} tickLine={false} tickSize="30"/>
           <Legend content={<CustomLegend />} verticalAlign="top"/>

@@ -1,11 +1,20 @@
 import React, { PureComponent, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Label } from 'recharts';
 
 import { getAverageUser } from '../services/service';
 
 
 // static demoUrl = 'https://codesandbox.io/s/tiny-line-chart-r5z0f';
+
+const CustomLegend = () => {
+  return (
+    <div className="legende-LineChart">
+      Durée moyenne <br/> des sessions
+    </div>
+  );
+};
+
 
 export default function Graph2() {
   
@@ -31,29 +40,28 @@ export default function Graph2() {
 
 
     const average = data.sessions;
-
-    // console.log(average);
+   
 
   return (
     <>
-      {/* <h2>Durée moyenne des sessions</h2> */}
+    
       <ResponsiveContainer width="100%" height="100%">
         <LineChart width={300} height={100} data={average}>
+          <Legend content={<CustomLegend />} verticalAlign="top"/>
           <XAxis
             dataKey="day"
             axisLine={false}
             stroke="#FFF"
             tickLine={false}
             tickFormatter={formatXAxis}
+            padding={{ left: 10, right: 10, top: 50 }}
             />
-          <Line type="monotone"  dataKey="sessionLength" stroke="#fff" strokeWidth={2} dot={false} />
+          <Line type="monotone"  dataKey="sessionLength" stroke="#fff" strokeWidth={2} dot={false}/>
           <Tooltip width={20}  cursor={{ stroke: 'black', strokeOpacity: 0.1, strokeWidth: 100}} content={<CustomTooltip />} />
         </LineChart>
       </ResponsiveContainer>
     
     </>
-
-   
     
   );
 }

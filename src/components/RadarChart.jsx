@@ -67,13 +67,13 @@ export default function Graph3() {
 
 
     const performance = [data];
-    // console.log(performance);
+    console.log(performance);
 
 
-    console.log(performance[0].kind);
+    // console.log(performance[0].kind);
 
     let testouille = [performance[0].kind];
-    console.log(testouille)
+    // console.log(testouille)
 
   return (
     <>
