@@ -59,6 +59,11 @@ nav a {
   font-size: 2.6em;
   margin-left: 70px;
 }
+@media only screen and (max-width: 1200px) {
+  #board h1 {
+    margin-left: 30px;
+  }
+}
 
 #board h1 span {
   color: #FF0000;
@@ -69,6 +74,11 @@ nav a {
   font-weight: 400;
   margin-left: 70px;
 }
+@media only screen and (max-width: 1200px) {
+  #board h2 {
+    margin-left: 30px;
+  }
+}
 
 .gridBoard {
   margin: 40px 70px;
@@ -77,6 +87,11 @@ nav a {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 30px;
   grid-template-areas: "area1 area1 area1 area1 area1 area1 area5 area5" "area1 area1 area1 area1 area1 area1 area5 area5" "area2 area2 area3 area3 area4 area4 area5 area5" "area2 area2 area3 area3 area4 area4 area5 area5";
+}
+@media only screen and (max-width: 1200px) {
+  .gridBoard {
+    margin: 40px 30px;
+  }
 }
 
 .graph1 {
@@ -134,7 +149,7 @@ nav a {
   justify-content: space-between;
 }
 .nombres .value {
-  font-size: 1.5em;
+  font-size: 1.5vw;
 }
 .nombres .label {
   color: #74798C;
@@ -187,37 +202,41 @@ nav a {
 }
 
 .tooltip-LineChart {
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000;
   font-size: 12px;
   padding: 5px 10px;
   font-weight: 700;
 }
 
 .legende-LineChart {
-  color: white;
+  color: #fff;
   padding: 20px;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 1em;
   opacity: 0.8;
 }
 
 .legende-RadialChart {
   text-align: center;
-  color: #8D91A0;
+  color: #74798C;
   font-weight: 500;
   font-size: 1.2em;
 }
 
 .legende-RadialChart > div:nth-child(1) {
-  color: black;
+  color: #000;
   font-size: 1.4em;
 }
 
 .titleScore {
   padding: 20px 0 0 30px;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 0.9em;
+  color: #000;
+  position: absolute;
+  top: -120%;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

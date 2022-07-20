@@ -1,15 +1,20 @@
 .legende-RadialChart{
   text-align: center;
-  color: #8D91A0;
+  color: $grisMoyen;
   font-weight: 500;
   font-size: 1.2em;
 }
 .legende-RadialChart >div:nth-child(1){
-  color: black;
+  color: $noir;
   font-size: 1.4em;
 }
 .titleScore{
   padding: 20px 0 0 30px;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 0.9em;
+  color: $noir;
+  position: absolute;
+  top: -120%;
+  left: 0;
+
 }

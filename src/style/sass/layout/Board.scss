@@ -10,6 +10,9 @@
 #board h1{
   font-size: 2.6em;
   margin-left: 70px;
+  @media only screen and (max-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 #board h1 span{
@@ -20,6 +23,9 @@
   font-size: 1.2em;
   font-weight: 400;
   margin-left: 70px;
+  @media only screen and (max-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 .gridBoard{
@@ -33,6 +39,11 @@
     "area1 area1 area1 area1 area1 area1 area5 area5"
     "area2 area2 area3 area3 area4 area4 area5 area5"
     "area2 area2 area3 area3 area4 area4 area5 area5"; 
+  
+    @media only screen and (max-width: 1200px) {
+      margin: 40px 30px;
+    }
+  
 }
 
 .graph1 { 

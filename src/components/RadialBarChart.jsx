@@ -1,6 +1,6 @@
 import React,{ useState }  from 'react';
 // import { RadialBarChart, RadialBar, Legend, ResponsiveContainer, PolarAngleAxis } from 'recharts';
-import { RadialBarChart  as Chart, RadialBar , PolarAngleAxis , ResponsiveContainer, Legend, Label} from 'recharts';
+import { RadialBarChart  as Chart, RadialBar , PolarAngleAxis , ResponsiveContainer, Legend, Label, Customized} from 'recharts';
 
 
 
@@ -18,16 +18,19 @@ export default function Graph4({data}) {
       <div className='legende-RadialChart'>
       <div>{data[0].id === 18 ? data[0].score*100 : data[0].todayScore*100}%</div>
       <div>de votre <br/>objectif</div>
+      <div className='titleScore'>Score</div>
       </div>
     );
   };
-  
+
 
 
   return (
     
    <>
-    <div className='titleScore'>Score</div>
+    {/* <span className='titleScore'>Score</span> */}
+    <ResponsiveContainer>
+    
     <Chart
         width={258}
         height={263}
@@ -41,12 +44,15 @@ export default function Graph4({data}) {
           dataKey={conditionScore} >
         </RadialBar > 
         <Legend content={<CustomLegend />} verticalAlign='middle' align="middle"/>  
+        <Customized content={<CustomLegend />} verticalAlign='top' align="top"/>  
         <PolarAngleAxis
           type="number"
           domain={[0, 1]}
           tick={false}
         />
       </Chart>
+
+    </ResponsiveContainer>
    </>
   );
 }

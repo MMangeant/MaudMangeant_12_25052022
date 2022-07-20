@@ -1,15 +1,15 @@
 .tooltip-LineChart{
-  background-color: white;
-  color: black;
+  background-color: $blanc;
+  color: $noir;
   font-size: 12px;
   padding: 5px 10px;
   font-weight: 700;
 }
 
 .legende-LineChart{
-  color: white;
+  color: $blanc;
   padding: 20px;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 1em;
   opacity: 0.8;
 }

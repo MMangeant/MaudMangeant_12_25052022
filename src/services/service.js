@@ -1,15 +1,15 @@
 
-// import { userData, userDataActivity } from './mockedData' 
+/* MOCKED DATA */
 
-
+// mocked data for user's profile 
 export let userData = {
   "id": 18,
   "userInfos": {
-    "firstName": 'Cecilio',
+    "firstName": 'Nemo',
     "lastName": 'Ratorez',
     "age": 34,
   },
-  "score": 0.3,
+  "score": 0.73,
   "keyData": {
     "calorieCount": 2500,
     "proteinCount": 90,
@@ -18,7 +18,7 @@ export let userData = {
   }
 };
 
-
+// mocked data for user's activity
 export let userDataActivity = {
   "userId": 18,
   "sessions": [
@@ -60,6 +60,7 @@ export let userDataActivity = {
   ]
 }
 
+// mocked data for user's average
 export let userDataAverage = {
       "userId": 18,
       "sessions": [
@@ -94,7 +95,7 @@ export let userDataAverage = {
       ]
   }
 
-
+// mocked data for user's performance
 export let userDataPerformance = {
     "userId": 18,
     "kind": {
@@ -132,13 +133,9 @@ export let userDataPerformance = {
         }
     ]
 }
-    
 
+/**/    
 
-
-
-
-      
 
 export async function getInfosUser(id){
   let response = await fetch(`http://localhost:3000/user/${id}`)
@@ -149,7 +146,6 @@ export async function getInfosUser(id){
   return userData;
 }
 
-
 export async function getActivityUser(id){
   let response = await fetch(`http://localhost:3000/user/${id}/activity`)
   if(response.ok){
@@ -158,7 +154,6 @@ export async function getActivityUser(id){
   }
   return userDataActivity;
 }
-
 
 export async function getAverageUser(id){
   let response = await fetch(`http://localhost:3000/user/${id}/average-sessions`)
@@ -177,5 +172,3 @@ export async function getPerformanceUser(id){
   }
   return userDataPerformance;
 }
-
-// console.log(getActivityUser(18))

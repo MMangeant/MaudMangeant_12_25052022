@@ -97,7 +97,7 @@ export default function Graph3() {
     <>
     {loading && 
       <ResponsiveContainer  width="100%" height="100%">
-        <RadarChart margin={{ left: 20, right: 20 }}  cx="50%" cy="50%" outerRadius="80%" data={perfData}>
+        <RadarChart margin={{ left: 20, right: 40 }}  cx="50%" cy="50%" outerRadius="80%" data={perfData}>
           <PolarGrid radialLines={false}/>
           <PolarAngleAxis dataKey="kind" tickLine={false} style={{fontSize: 10}} stroke="white"/>
           <Radar name="Mike" dataKey="value"  fill="#FF0101" fillOpacity={0.6} />
