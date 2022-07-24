@@ -1,20 +1,17 @@
-import React,{ useState }  from 'react';
 import { RadialBarChart  as Chart, RadialBar , PolarAngleAxis , ResponsiveContainer, Legend, Label, Customized} from 'recharts';
 
 
 /**
 * Displaying the chart of **average score**
 * @param data 
-* @return Graph4
+* @return GraphRadialChart
 */
 
 
-export default function Graph4({data}) {
-
+export default function GraphRadialChart({data}) {
 
   let conditionScore = data[0].id === 18 ? 'score' : 'todayScore';
  
-
   const CustomLegend = () => {
     return (
       <div className='legende-RadialChart'>
@@ -25,12 +22,9 @@ export default function Graph4({data}) {
     );
   };
 
-
-
   return (
     
    <>
-    {/* <span className='titleScore'>Score</span> */}
     <ResponsiveContainer>
     
     <Chart
@@ -42,7 +36,7 @@ export default function Graph4({data}) {
         barSize={15}
         startAngle={90}
         endAngle={470}>
-        <RadialBar background cornerRadius={40} /* label={{ value: {scores}, fill: '#666', position: 'center' }} */ fill="#FF0101" 
+        <RadialBar background cornerRadius={40} fill="#FF0101" 
           dataKey={conditionScore} >
         </RadialBar > 
         <Legend content={<CustomLegend />} verticalAlign='middle' align="middle"/>  

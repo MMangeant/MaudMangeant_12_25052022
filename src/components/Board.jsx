@@ -1,11 +1,11 @@
 import '../style/style.css';
 import Chiffres from './Chiffres';
-import Graph1 from './BarChart';
-import Graph2 from './LineChart';
-import Graph3 from './RadarChart';
-import Graph4 from './RadialBarChart';
+import GraphBarChart from './BarChart';
+import GraphLineChart from './LineChart';
+import GraphRadarChart from './RadarChart';
+import GraphRadialChart from './RadialBarChart';
 
-import { getInfosUser, getActivityUser } from '../services/service';
+import { getInfosUser } from '../services/service';
 
 import React,{ useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -33,20 +33,9 @@ function Board() {
             })
     }, [id]);
 
-
-    // console.log(id);
     const profil = data.userInfos;
     const chiffres = data.keyData;
-    // const score = data.todayScore;
 
-
-    let conditionScore;
-    if (data.id === 18) {
-      conditionScore = "score";
-    } else {
-      conditionScore = "todayScore";
-    }
-    
   return (
     <div>
     {loading && 
@@ -60,17 +49,16 @@ function Board() {
         <div className='gridBoard'>
         
           <div className="graph1 graphs">
-            <Graph1 />
+            <GraphBarChart />
           </div>
           <div className="graph2 graphs">
-            {/* <div>Durée moyenne des <br />sessions</div> */}
-            <Graph2 />
+            <GraphLineChart />
           </div>
           <div className="graph3 graphs">
-            <Graph3 />
+            <GraphRadarChart />
           </div>
           <div className="graph4 graphs">
-            <Graph4 data={[data]}/>
+            <GraphRadialChart data={[data]}/>
           </div>
           <div className='gridChiffres'>
             <Chiffres data={chiffres}/>

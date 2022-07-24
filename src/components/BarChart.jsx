@@ -7,7 +7,7 @@ import { getActivityUser } from '../services/service';
 
 /**
 * Displaying the chart of daily activity, with the weight and the calories burned
-* @return Graph1
+* @return GraphBarChart
 */
 
 
@@ -41,11 +41,7 @@ const CustomLegend = () => {
 };
 
 
-
-// static demoUrl = 'https://codesandbox.io/s/simple-bar-chart-tpz8r';
-
-
-export default function Graph1() {
+export default function GraphBarChart() {
 
   const formatXAxis = (tick) => {
 		return tick + 1;
@@ -68,8 +64,6 @@ export default function Graph1() {
 
 
     const activity = data.sessions;
-
-    // console.log(activity);
 
   return (
     <>

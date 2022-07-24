@@ -7,7 +7,7 @@ import { getAverageUser } from '../services/service';
 
 /**
 * Displaying the chart of **average duration of sessions**
-* @return Graph2
+* @return GraphLineChart
 */
 
 
@@ -20,7 +20,7 @@ const CustomLegend = () => {
 };
 
 
-export default function Graph2() {
+export default function GraphLineChart() {
   
   const days = ["L", "M", "M", "J", "V", "S", "D"]
 

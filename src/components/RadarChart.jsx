@@ -7,18 +7,11 @@ import { getPerformanceUser } from '../services/service';
 
 /**
 * Displaying the chart of **type of activity**
-* @return Graph3
+* @return GraphRadarChart
 */
 
 
-export default function Graph3() {
-
-  const kinds = ["Energie", "Endurance", "Force", "Vitesse", "Intensité", "Cardio"]
-
-  const formatNames = (tick) => {
-		return kinds[tick];
-	};
-
+export default function GraphRadarChart() {
 
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -38,8 +31,6 @@ export default function Graph3() {
     const performance = [data];
 
     let perfData = performance[0].data;
-    console.log(perfData)
-
 
     function kind(){
       perfData.forEach(element => {
@@ -52,6 +43,7 @@ export default function Graph3() {
       });
         return perfData
     }
+    // eslint-disable-next-line no-lone-blocks
     {loading &&  
       kind()
     }
