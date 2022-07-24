@@ -5,6 +5,12 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { getActivityUser } from '../services/service';
 
 
+/**
+* Displaying the chart of daily activity, with the weight and the calories burned
+* @return Graph1
+*/
+
+
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (

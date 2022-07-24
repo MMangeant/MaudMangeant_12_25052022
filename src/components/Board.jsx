@@ -5,13 +5,17 @@ import Graph2 from './LineChart';
 import Graph3 from './RadarChart';
 import Graph4 from './RadialBarChart';
 
-
 import { getInfosUser, getActivityUser } from '../services/service';
 
 import React,{ useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-// console.log(getInfosUser());
+
+/**
+* Displaying all the charts on the page
+* @return Board
+*/
+
 
 function Board() {
 

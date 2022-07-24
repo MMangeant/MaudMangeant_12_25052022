@@ -5,6 +5,8 @@ import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Home from './pages/Home';
+import User from './pages/User';
+import Error from './pages/Error';
 
 
 const App = () => {
@@ -15,8 +17,9 @@ const App = () => {
         <div className='App'>
         <Header />
           <Routes>
-            {/* <Route exact path="/" element={<Home />} /> */}
-            <Route exact path="/user/:id" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
+            <Route path='/user/:id' element={ <User /> } />
+            <Route exact path="*" element={<Error />} />
           </Routes>
         </div>
       </Router>

@@ -1,11 +1,13 @@
 import React,{ useState }  from 'react';
-// import { RadialBarChart, RadialBar, Legend, ResponsiveContainer, PolarAngleAxis } from 'recharts';
 import { RadialBarChart  as Chart, RadialBar , PolarAngleAxis , ResponsiveContainer, Legend, Label, Customized} from 'recharts';
 
 
+/**
+* Displaying the chart of **average score**
+* @param data 
+* @return Graph4
+*/
 
-
-// static demoUrl = 'https://codesandbox.io/s/simple-radial-bar-chart-qf8fz';
 
 export default function Graph4({data}) {
 

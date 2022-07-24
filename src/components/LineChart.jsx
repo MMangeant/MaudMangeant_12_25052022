@@ -5,7 +5,11 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { getAverageUser } from '../services/service';
 
 
-// static demoUrl = 'https://codesandbox.io/s/tiny-line-chart-r5z0f';
+/**
+* Displaying the chart of **average duration of sessions**
+* @return Graph2
+*/
+
 
 const CustomLegend = () => {
   return (

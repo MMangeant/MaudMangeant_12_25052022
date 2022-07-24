@@ -4,48 +4,11 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, Legend, PolarRadiusAxis, 
 
 import { getPerformanceUser } from '../services/service';
 
-const dataB = [
-  {
-    subject: 'Math',
-    A: 120,
-    B: 110,
-    fullMark: 150,
-  },
-  {
-    subject: 'Chinese',
-    A: 98,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: 'English',
-    A: 86,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: 'Geography',
-    A: 99,
-    B: 100,
-    fullMark: 150,
-  },
-  {
-    subject: 'Physics',
-    A: 85,
-    B: 90,
-    fullMark: 150,
-  },
-  {
-    subject: 'History',
-    A: 65,
-    B: 85,
-    fullMark: 150,
-  },
-];
 
-
-
-//  static demoUrl = 'https://codesandbox.io/s/simple-radar-chart-rjoc6';
+/**
+* Displaying the chart of **type of activity**
+* @return Graph3
+*/
 
 
 export default function Graph3() {

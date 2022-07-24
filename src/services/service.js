@@ -137,6 +137,13 @@ export let userDataPerformance = {
 /**/    
 
 
+/**
+* Functions for getting user’s data from the API
+
+* @param {number} id
+*/
+
+
 export async function getInfosUser(id){
   let response = await fetch(`http://localhost:3000/user/${id}`)
   if(response.ok){

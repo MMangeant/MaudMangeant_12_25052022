@@ -4,6 +4,14 @@ import picto3 from '../assets/carbs-icon.png';
 import picto4 from '../assets/fat-icon.png';
 import '../style/style.css';
 
+
+/**
+* Displaying the key infos of the day (proteins,..
+* @param data 
+* @return Chiffres
+*/
+
+
 function Chiffres({data}) {
   return (
     <>
