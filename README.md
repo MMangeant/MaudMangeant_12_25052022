@@ -4,6 +4,7 @@
 NodeJs
 npm 
 Recharts
+Sass
 
 ## Installation for React Api
 Clone this directory :
