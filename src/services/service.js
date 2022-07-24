@@ -11,10 +11,10 @@ export let userData = {
   },
   "score": 0.73,
   "keyData": {
-    "calorieCount": 2500,
-    "proteinCount": 90,
-    "carbohydrateCount": 150,
-    "lipidCount": 120
+    "calorieCount": 100,
+    "proteinCount": 200,
+    "carbohydrateCount": 300,
+    "lipidCount": 400
   }
 };
 
@@ -24,38 +24,38 @@ export let userDataActivity = {
   "sessions": [
     {
       "day": "2020-07-01",
-      "kilogram": 70,
-      "calories": 240
+      "kilogram": 100,
+      "calories": 150
     },
     {
       "day": "2020-07-02",
-      "kilogram": 69,
-      "calories": 220
+      "kilogram": 200,
+      "calories": 250
     },
     {
       "day": "2020-07-03",
-      "kilogram": 70,
-      "calories": 280
+      "kilogram": 300,
+      "calories": 350
     },
     {
       "day": "2020-07-04",
-      "kilogram": 70,
-      "calories": 500
+      "kilogram": 400,
+      "calories": 450
     },
     {
       "day": "2020-07-05",
-      "kilogram": 69,
-      "calories": 160
+      "kilogram": 500,
+      "calories": 550
     },
     {
       "day": "2020-07-06",
-      "kilogram": 69,
-      "calories": 162
+      "kilogram": 600,
+      "calories": 650
     },
     {
       "day": "2020-07-07",
-      "kilogram": 69,
-      "calories": 390
+      "kilogram": 700,
+      "calories": 750
     }
   ]
 }
@@ -66,31 +66,31 @@ export let userDataAverage = {
       "sessions": [
           {
               "day": 1,
-              "sessionLength": 30
+              "sessionLength": 10
           },
           {
               "day": 2,
-              "sessionLength": 40
+              "sessionLength": 70
           },
           {
               "day": 3,
-              "sessionLength": 50
+              "sessionLength": 10
           },
           {
               "day": 4,
-              "sessionLength": 30
+              "sessionLength": 70
           },
           {
               "day": 5,
-              "sessionLength": 30
+              "sessionLength": 10
           },
           {
               "day": 6,
-              "sessionLength": 50
+              "sessionLength": 70
           },
           {
               "day": 7,
-              "sessionLength": 50
+              "sessionLength": 10
           }
       ]
   }
@@ -112,23 +112,23 @@ export let userDataPerformance = {
             "kind": 1
         },
         {
-            "value": 240,
+            "value": 50,
             "kind": 2
         },
         {
-            "value": 80,
+            "value": 200,
             "kind": 3
         },
         {
-            "value": 80,
+            "value": 50,
             "kind": 4
         },
         {
-            "value": 220,
+            "value": 200,
             "kind": 5
         },
         {
-            "value": 110,
+            "value": 50,
             "kind": 6
         }
     ]
