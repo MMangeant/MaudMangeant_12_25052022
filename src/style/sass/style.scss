@@ -1,8 +1,10 @@
 @import "./utils/variables.scss";
+@import "./base/base.scss";
 
 @import "./layout/Aside.scss";
 @import "./layout/Header.scss";
 @import "./layout/Board.scss";
+@import "./layout/Home.scss";
 
 @import "./composants/Chiffres.scss";
 @import "./composants/BarChart.scss";

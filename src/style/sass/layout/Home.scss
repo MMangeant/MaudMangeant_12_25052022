@@ -1,0 +1,22 @@
+.homePage{
+  background: $blanc;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .user{
+    background-color: $rougeClair;
+    color: $blanc;
+    padding: 15px 25px ;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 0 20px;
+  }
+  h2{
+    padding-bottom: 20px;
+  }
+}
+
+.imgError{
+  max-width: 70px;
+}

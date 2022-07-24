@@ -3,11 +3,11 @@
 
 // mocked data for user's profile 
 export let userData = {
-  "id": 18,
+  "id": 15,
   "userInfos": {
-    "firstName": 'Nemo',
-    "lastName": 'Ratorez',
-    "age": 34,
+    "firstName": 'Gilbert',
+    "lastName": 'Greco',
+    "age": 56,
   },
   "score": 0.73,
   "keyData": {

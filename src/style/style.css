@@ -1,7 +1,12 @@
+.App {
+  height: 100vh !important;
+}
+
 aside {
   height: 100%;
   position: absolute;
   width: 10%;
+  background: #000;
   top: 0;
   left: 0;
   z-index: -1;
@@ -121,6 +126,29 @@ nav a {
 
 .gridChiffres {
   grid-area: area5;
+}
+
+.homePage {
+  background: #fff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homePage .user {
+  background-color: #FF0000;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0 20px;
+}
+.homePage h2 {
+  padding-bottom: 20px;
+}
+
+.imgError {
+  max-width: 70px;
 }
 
 .gridChiffres {
