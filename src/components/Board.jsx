@@ -45,9 +45,6 @@ function Board() {
         <h1>Bonjour 
           <span> {profil.firstName}</span>
         </h1>
-        <div className="graph1 graphs">
-            <GraphBarChart />
-          </div>
         <h2>Félicitation ! Vous avez explosé vos objectifs hier 👏</h2>
         <div className='gridBoard'>
         
