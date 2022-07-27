@@ -1,6 +1,6 @@
-import React, { PureComponent, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Label } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 import { getAverageUser } from '../services/service';
 
@@ -10,6 +10,18 @@ import { getAverageUser } from '../services/service';
 * @return GraphLineChart
 */
 
+
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="tooltip-LineChart">
+        <p>{`${payload[0].value} min`}</p>
+      </div>
+    );
+  }
+  return null;
+};
 
 const CustomLegend = () => {
   return (
@@ -71,13 +83,3 @@ export default function GraphLineChart() {
 }
 
 
-const CustomTooltip = ({ active, payload }) => {
-  if (active && payload && payload.length) {
-    return (
-      <div className="tooltip-LineChart">
-        <p>{`${payload[0].value} min`}</p>
-      </div>
-    );
-  }
-  return null;
-};

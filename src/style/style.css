@@ -202,7 +202,7 @@ nav a {
 .legende-BarChart h3 {
   color: #000;
 }
-.legende-BarChart p {
+.legende-BarChart .contLegende {
   margin-left: 25px;
   display: flex;
   align-items: center;

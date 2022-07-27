@@ -1,6 +1,6 @@
-import React, { PureComponent, useState, useEffect } from 'react';
+import React, {  useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Label } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 import { getActivityUser } from '../services/service';
 
@@ -23,16 +23,15 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
+
 const CustomLegend = () => {
   return (
     <div className="legende-BarChart">
       <div>
         <h3>Activité quotidienne</h3>
         <div>
-          
-          <p><div className="rond grey"></div>Poids (kg)</p>
-          
-          <p><div className="rond red"></div>Calories brûlées (kCal)</p>
+          <div className='contLegende'><div className="rond grey"></div>Poids (kg)</div>
+          <div className='contLegende'><div className="rond red"></div>Calories brûlées (kCal)</div>
         </div>
       </div>
       <div className='separateur'></div>
@@ -65,6 +64,8 @@ export default function GraphBarChart() {
 
     const activity = data.sessions;
 
+    console.log();
+
   return (
     <>
     <ResponsiveContainer width="100%" height="100%">
@@ -79,14 +80,13 @@ export default function GraphBarChart() {
             bottom: 5,
           }}
         >
+          <Legend content={<CustomLegend />} verticalAlign="top"/>
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="10" />
           <YAxis orientation='right' axisLine={false} tickLine={false} tickSize="30"/>
-          <Legend content={<CustomLegend />} verticalAlign="top"/>
-          <Tooltip width={50} content={<CustomTooltip />}/>
-          <Bar dataKey="kilogram" fill="#282D30" radius={[30, 30, 0, 0]} barSize={10}/>
+          <Bar  onMouseOver dataKey="kilogram" fill="#282D30" radius={[30, 30, 0, 0]} barSize={10}/>
           <Bar dataKey="calories" fill="#E60000" radius={[30, 30, 0, 0]} barSize={10}/>
-
+          <Tooltip width={50} content={<CustomTooltip />}/>
         </BarChart>
       </ResponsiveContainer>
     
