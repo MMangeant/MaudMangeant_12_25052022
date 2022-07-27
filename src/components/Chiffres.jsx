@@ -6,7 +6,7 @@ import '../style/style.css';
 
 
 /**
-* Displaying the key infos of the day (proteins,..
+* Displaying the key infos of the day (calories, proteins, carbohydrates, fats)
 * @param data 
 * @return Chiffres
 */

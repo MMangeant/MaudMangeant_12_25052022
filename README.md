@@ -3,6 +3,7 @@
 ## Prerequisites
 NodeJs
 npm 
+React
 Recharts
 Sass
 

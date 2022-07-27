@@ -64,8 +64,7 @@ export default function GraphBarChart() {
 
     const activity = data.sessions;
 
-    console.log();
-
+    
   return (
     <>
     <ResponsiveContainer width="100%" height="100%">
