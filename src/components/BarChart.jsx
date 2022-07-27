@@ -84,9 +84,9 @@ export default function GraphBarChart() {
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis tickFormatter={formatXAxis} tickLine={false} tickSize="10" />
           <YAxis orientation='right' axisLine={false} tickLine={false} tickSize="30"/>
-          <Bar  onMouseOver dataKey="kilogram" fill="#282D30" radius={[30, 30, 0, 0]} barSize={10}/>
-          <Bar dataKey="calories" fill="#E60000" radius={[30, 30, 0, 0]} barSize={10}/>
           <Tooltip width={50} content={<CustomTooltip />}/>
+          <Bar dataKey="kilogram" fill="#282D30" radius={[30, 30, 0, 0]} barSize={10}/>
+          <Bar dataKey="calories" fill="#E60000" radius={[30, 30, 0, 0]} barSize={10}/>
         </BarChart>
       </ResponsiveContainer>
     

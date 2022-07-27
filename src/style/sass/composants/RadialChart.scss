@@ -3,6 +3,9 @@
   color: $grisMoyen;
   font-weight: 500;
   font-size: 1.2em;
+  @media only screen and (max-width: 1200px) {
+    font-size: 0.9em;
+  }
 }
 .legende-RadialChart >div:nth-child(1){
   color: $noir;
@@ -16,5 +19,9 @@
   position: absolute;
   top: -120%;
   left: 0;
+  @media only screen and (max-width: 1200px) {
+    font-size: 1.2em;
+    top: -160%;
+  }
 
 }
