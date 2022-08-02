@@ -69,7 +69,7 @@ function Board() {
   </>
   }
   {!loading &&
-      <h1>Page en construction</h1>
+      <h1>Erreur de chargement de la page</h1>
   }
   </div>    
   );

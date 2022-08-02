@@ -139,7 +139,6 @@ export let userDataPerformance = {
 
 /**
 * Functions for getting user’s data from the API
-
 * @param {number} id
 */
 
